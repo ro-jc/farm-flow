@@ -20,7 +20,7 @@ export const WeatherWidget = () => {
       const seasonWeather = {
         kharif: { temp: 30, humidity: 80, windSpeed: 15, condition: 'Rainy', rainfall: 45 },
         rabi: { temp: 25, humidity: 55, windSpeed: 8, condition: 'Clear', rainfall: 5 },
-        summer: { temp: 38, humidity: 40, windSpeed: 20, condition: 'Hot', rainfall: 0 },
+        zaid: { temp: 38, humidity: 40, windSpeed: 20, condition: 'Hot', rainfall: 0 },
       };
       setWeather(prev => ({
         ...prev,
