@@ -36,7 +36,7 @@ export const translations = {
     
     // Sowing Date
     sowingDate: 'Sowing Date',
-    offSeasonWarning: 'Off-season crop selected!',
+    offSeasonWarning: 'Off-season crop selected! See management recommendations below.',
     
     // Farm Area
     farmArea: 'Farm Area',

@@ -122,7 +122,7 @@ export const FertilizerPlan = () => {
       icon: Sparkles,
       color: 'farm-organic',
       items: [
-        { name: spicProducts.nano.nanoUrea.brand, composition: spicProducts.nano.nanoUrea.composition, qty: `${(500 * area / 1000).toFixed(1)} L`, application: language === 'en' ? 'Foliar spray at germination, tillering & 1 week before flowering' : 'கிளைப்பு & பூக்கும் நேரத்தில் இலை தெளிப்பு' },
+        { name: spicProducts.nano.nanoUrea.brand, composition: spicProducts.nano.nanoUrea.composition, qty: `${(500 * area / 1000).toFixed(1)} L`, application: language === 'en' ? 'Foliar spray at tillering & flowering' : 'கிளைப்பு & பூக்கும் நேரத்தில் இலை தெளிப்பு' },
         { name: spicProducts.nano.nanoDap.brand, composition: spicProducts.nano.nanoDap.composition, qty: `${(500 * area / 1000).toFixed(1)} L`, application: language === 'en' ? 'Foliar spray at vegetative stage' : 'வளர்ச்சி நிலையில் இலை தெளிப்பு' },
       ]
     },

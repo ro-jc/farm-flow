@@ -12,7 +12,7 @@ export const SeasonSelector = () => {
   const seasons: { id: Season; icon: typeof Sun; months: string }[] = [
     { id: 'kharif', icon: CloudRain, months: 'Jun - Oct' },
     { id: 'rabi', icon: Sun, months: 'Oct - Mar' },
-    { id: 'zaid', icon: Thermometer, months: 'Mar - Jun' },
+    { id: 'summer', icon: Thermometer, months: 'Mar - Jun' },
   ];
 
   const checkIfOffSeason = (season: Season) => {
