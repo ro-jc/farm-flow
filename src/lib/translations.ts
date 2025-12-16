@@ -32,7 +32,7 @@ export const translations = {
     selectSeason: 'Select Season',
     kharif: 'Kharif (June - October)',
     rabi: 'Rabi (October - March)',
-    summer: 'Summer (March - June)',
+    summer: 'Zaid (March - June)',
     
     // Sowing Date
     sowingDate: 'Sowing Date',

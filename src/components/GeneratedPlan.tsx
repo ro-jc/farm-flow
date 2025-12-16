@@ -53,7 +53,7 @@ export const GeneratedPlan = ({ onBack }: GeneratedPlanProps) => {
           </Button>
           <Button variant="outline" size="sm" className="gap-2">
             <Share2 className="h-4 w-4" />
-            {language === 'en' ? 'Share' : 'பகிர்'}
+            {language === 'en' ? 'Save' : 'சேமி'}
           </Button>
         </div>
       </div>

@@ -55,9 +55,9 @@ const defaultFarmPlan: FarmPlanData = {
     soilGroup: '',
     irrigationSystem: '',
     soilPH: 6.5,
-    availableN: 250,
-    availableP: 20,
-    availableK: 200,
+    availableN: 280,
+    availableP: 15,
+    availableK: 150,
   },
   fertilizerSources: {
     nSource: 'urea',
