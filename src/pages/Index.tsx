@@ -61,8 +61,8 @@ const AppContent = () => {
         <div className="container mx-auto px-4 text-center">
           <p className={`text-sm text-muted-foreground ${language === 'ta' ? 'font-tamil' : ''}`}>
             {language === 'en' 
-              ? '© 2024 Farm Flow. Data sourced from TNAU Agritech Portal & SPIC.'
-              : '© 2024 பண்ணை ஓட்டம். தரவு TNAU வேளாண்மை போர்டல் & SPIC இலிருந்து பெறப்பட்டது.'
+              ? '© 2025 Farm Flow. Data sourced from TNAU Agritech Portal & SPIC.'
+              : '© 2025 பண்ணை ஓட்டம். தரவு TNAU வேளாண்மை போர்டல் & SPIC இலிருந்து பெறப்பட்டது.'
             }
           </p>
           <p className="text-xs text-muted-foreground mt-2">
