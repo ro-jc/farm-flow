@@ -10,9 +10,9 @@ export const SeasonSelector = () => {
   const { farmPlan, updateFarmPlan } = useFarmPlan();
 
   const seasons: { id: Season; icon: typeof Sun; months: string }[] = [
-    { id: 'kharif', icon: CloudRain, months: 'Apr - Sept' },
-    { id: 'rabi', icon: Sun, months: 'Oct - Dec' },
-    { id: 'zaid', icon: Thermometer, months: 'Jan - Mar' },
+    { id: 'kharif', icon: CloudRain, months: 'Jun - Oct' },
+    { id: 'rabi', icon: Sun, months: 'Oct - Mar' },
+    { id: 'zaid', icon: Thermometer, months: 'Mar - Jun' },
   ];
 
   const checkIfOffSeason = (season: Season) => {
