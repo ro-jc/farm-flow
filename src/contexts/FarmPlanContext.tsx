@@ -57,7 +57,7 @@ const defaultFarmPlan: FarmPlanData = {
     soilPH: 6.5,
     availableN: 280,
     availableP: 15,
-    availableK: 100,
+    availableK: 110,
   },
   fertilizerSources: {
     nSource: 'urea',
