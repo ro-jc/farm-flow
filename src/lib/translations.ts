@@ -26,6 +26,7 @@ export const translations = {
     selectVariety: 'Select Variety',
     chooseVariety: 'Choose variety',
     variety: 'Variety',
+    cottonManganeseInfo: 'Cotton is prone to manganese deficiency — please check the Nutrient Deficiency guide after generating the plan.',
     
     // Region
     selectRegion: 'Select Region',
@@ -185,6 +186,7 @@ export const translations = {
     selectVariety: 'விதையை தேர்வு செய்யவும்',
     chooseVariety: 'விதையை தேர்ந்தெடுக்கவும்',
     variety: 'விதை',
+    cottonManganeseInfo: 'பருத்தி மாங்கனீஸ் குறைபாடு ஏற்படக்கூடியது — திட்டம் உருவாக்கப்பட்ட பிறகு ஊட்டச்சத்து குறைபாடு வழிகாட்டியைப் பார்க்கவும்.',
     
     // Region
     selectRegion: 'பகுதியை தேர்வு செய்யவும்',

@@ -1,7 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useFarmPlan, CropType } from '@/contexts/FarmPlanContext';
 import { cn } from '@/lib/utils';
-import { Check } from 'lucide-react';
+import { Check, AlertTriangle } from 'lucide-react';
 import { cropVarieties } from '@/lib/cropData';
 
 export const CropSelector = () => {
@@ -68,6 +68,17 @@ export const CropSelector = () => {
               <option key={v} value={v}>{v}</option>
             ))}
           </select>
+        </div>
+      )}
+
+      {farmPlan.crop === 'cotton' && (
+        <div className="mt-4 p-4 rounded-md bg-farm-wheat/10 border border-farm-wheat/20 flex items-start gap-3">
+          <div className="mt-0.5">
+            <AlertTriangle className="h-5 w-5 text-farm-wheat" />
+          </div>
+          <p className={`text-sm text-muted-foreground ${language === 'ta' ? 'font-tamil' : ''}`}>
+            {t('cottonManganeseInfo')}
+          </p>
         </div>
       )}
     </div>
