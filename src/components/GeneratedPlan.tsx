@@ -9,7 +9,8 @@ import { PlantProtection } from './plan/PlantProtection';
 import { NutrientDeficiency } from './plan/NutrientDeficiency';
 import { Button } from '@/components/ui/button';
 import { crops } from '@/lib/cropData';
-import { ArrowLeft, Download, Share2, Printer, Leaf, Sprout, MapPin, Calendar, LandPlot } from 'lucide-react';
+import { ArrowLeft, Download, Printer, Leaf, Sprout, MapPin, Calendar, LandPlot } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 import { format } from 'date-fns';
 
 interface GeneratedPlanProps {
@@ -19,6 +20,7 @@ interface GeneratedPlanProps {
 export const GeneratedPlan = ({ onBack }: GeneratedPlanProps) => {
   const { language } = useLanguage();
   const { farmPlan } = useFarmPlan();
+  const { toast } = useToast();
 
   if (!farmPlan.crop) return null;
 
@@ -43,17 +45,49 @@ export const GeneratedPlan = ({ onBack }: GeneratedPlanProps) => {
         </div>
 
         <div className="flex items-center gap-2">
-          <Button variant="outline" size="sm" className="gap-2">
+          <Button
+            variant="outline"
+            size="sm"
+            className="gap-2"
+            onClick={() => {
+              try {
+                const data = { farmPlan, generatedAt: new Date().toISOString() };
+                const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${(farmPlan.crop ?? 'farm-plan')}-${new Date().toISOString()}.json`;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                URL.revokeObjectURL(url);
+                toast({ title: language === 'en' ? 'Downloaded' : 'பதிவிறக்கம் செய்யப்பட்டது', description: language === 'en' ? 'Farm plan JSON downloaded.' : 'பண்ணை திட்டம் JSON பதிவிறக்கம் செய்யப்பட்டது.' });
+              } catch (err) {
+                console.error(err);
+                toast({ title: language === 'en' ? 'Download failed' : 'பதிவிறக்கத்தில் தோல்வி', description: language === 'en' ? 'Unable to download the plan.' : 'திட்டத்தை பதிவிறக்க முடியவில்லை.' });
+              }
+            }}
+          >
             <Download className="h-4 w-4" />
             {language === 'en' ? 'Download' : 'பதிவிறக்கு'}
           </Button>
-          <Button variant="outline" size="sm" className="gap-2">
+
+          <Button
+            variant="outline"
+            size="sm"
+            className="gap-2"
+            onClick={() => {
+              try {
+                window.print();
+                toast({ title: language === 'en' ? 'Print' : 'அச்சிடு', description: language === 'en' ? 'Print dialog opened.' : 'அச்சு உரையெழுத்து திறக்கப்பட்டது.' });
+              } catch (err) {
+                console.error(err);
+                toast({ title: language === 'en' ? 'Print failed' : 'அச்சிடலில் தோல்வி', description: language === 'en' ? 'Unable to open print dialog.' : 'அச்சு உரையெழுத்தை திறக்க முடியவில்லை.' });
+              }
+            }}
+          >
             <Printer className="h-4 w-4" />
             {language === 'en' ? 'Print' : 'அச்சிடு'}
-          </Button>
-          <Button variant="outline" size="sm" className="gap-2">
-            <Share2 className="h-4 w-4" />
-            {language === 'en' ? 'Share' : 'பகிர்'}
           </Button>
         </div>
       </div>
