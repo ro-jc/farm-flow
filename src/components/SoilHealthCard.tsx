@@ -161,7 +161,7 @@ export const SoilHealthCard = () => {
           { label: 'C', value: farmPlan.soilHealth.soilOrganicCarbon, low: 0.5, high: 0.75, color: 'farm-wheat', unit: '%' },
         ].map((nutrient) => {
           const statusKey = nutrient.value < nutrient.low ? 'low' : nutrient.value > nutrient.high ? 'high' : 'medium';
-          const statusColor = statusKey === 'low' ? 'text-destructive' : statusKey === 'high' ? 'text-farm-green' : 'text-farm-wheat';
+          const statusColor = statusKey === 'low' || statusKey === 'high' ? 'text-destructive' : 'text-farm-green';
           const statusLabel = t(statusKey as any);
           const displayValue = nutrient.unit === '%' ? Number(nutrient.value).toFixed(2) : nutrient.value;
 

@@ -149,8 +149,9 @@ export const translations = {
     kgPerAcre: 'kg/acre',
     rsPerAcre: '₹/acre',
     low: 'Low',
-    medium: 'Medium',
+    medium: 'Good',
     high: 'High',
+    rockPhosphateAlkalineWarning: 'Rock Phosphate is not recommended for alkaline soils (pH > 7.2).',
     
     // Buttons
     next: 'Next',
@@ -307,8 +308,9 @@ export const translations = {
     kgPerAcre: 'கிகி/ஏக்கர்',
     rsPerAcre: '₹/ஏக்கர்',
     low: 'குறைவு',
-    medium: 'மிதம்',
+    medium: 'நன்று',
     high: 'அதிகம்',
+    rockPhosphateAlkalineWarning: 'மண் ஏற்கனவே ஆல்கைலின் (pH > 7.2) என்பதால் Rock Phosphate பரிந்துரைக்கப்படவில்லை.',
     
     // Buttons
     next: 'அடுத்து',

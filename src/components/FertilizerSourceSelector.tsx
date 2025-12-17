@@ -90,6 +90,15 @@ export const FertilizerSourceSelector = () => {
               ))}
             </SelectContent>
           </Select>
+
+          {/* Warning: Rock Phosphate not recommended on alkaline soils */}
+          {farmPlan.fertilizerSources.pSource === 'rockPhosphate' && farmPlan.soilHealth.soilPH > 7.2 && (
+            <div className="mt-2 p-3 rounded-md bg-destructive/10 border border-destructive/20">
+              <p className={`text-sm text-destructive ${language === 'ta' ? 'font-tamil' : ''}`}>
+                {t('rockPhosphateAlkalineWarning')}
+              </p>
+            </div>
+          )}
         </div>
 
         {/* Potassium Source */}
