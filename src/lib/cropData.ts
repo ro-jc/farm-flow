@@ -112,7 +112,8 @@ export const spicProducts = {
     humic: { brand: 'SPIC Humic', composition: 'Humic acid 12%', dosage: '1 kg/acre' },
   },
   nano: {
-    nanoUrea: { brand: '  SPIC Sakthi Nano Urea', composition: '4% N', dosage: '500 ml/acre (foliar)' },
+    nanoUrea: { brand: 'IFFCO Nano Urea', composition: '4% N', dosage: '500 ml/acre (foliar)' },
+    nanoDap: { brand: 'IFFCO Nano DAP', composition: '8% N + 16% P', dosage: '500 ml/acre (foliar)' },
   },
   bioFertilizers: {
     azospirillum: { brand: 'SPIC Azospirillum', composition: 'Azospirillum brasilense', dosage: '200 g/acre' },
