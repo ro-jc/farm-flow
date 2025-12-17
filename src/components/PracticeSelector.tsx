@@ -29,21 +29,21 @@ export const PracticeSelector = () => {
               onClick={() => updateFarmPlan({ practice: practice.id })}
               className={cn(
                 "relative flex flex-col items-start p-6 rounded-2xl border-2 transition-all duration-300 text-left",
-                isSelected 
-                  ? `border-${practice.color} bg-${practice.color}/5 shadow-lg` 
+                isSelected
+                  ? `border-farm-green bg-farm-green/5 shadow-lg`
                   : "border-border hover:border-muted-foreground/30 hover:bg-muted/50"
               )}
             >
               {isSelected && (
-                <div className={`absolute top-4 right-4 h-6 w-6 rounded-full bg-${practice.color} flex items-center justify-center`}>
+                <div className={`absolute top-4 right-4 h-6 w-6 rounded-full bg-farm-green flex items-center justify-center`}>
                   <Check className="h-4 w-4 text-primary-foreground" />
                 </div>
               )}
               
               <div className={cn(
                 "h-12 w-12 rounded-xl flex items-center justify-center mb-4",
-                isSelected 
-                  ? `bg-gradient-to-br from-${practice.color} to-${practice.color}-light` 
+                isSelected
+                  ? `bg-gradient-to-br from-farm-green to-farm-green-light`
                   : "bg-muted"
               )}>
                 <Icon className={cn(

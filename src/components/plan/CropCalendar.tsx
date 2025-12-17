@@ -80,8 +80,8 @@ export const CropCalendar = () => {
       </div>
 
       <div className="relative">
-        {/* Timeline line */}
-        <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-farm-green via-farm-wheat to-farm-earth" />
+        {/* Timeline line: center aligned with the icon (pl-2 + half icon width = 1.5rem = left-6) */}
+        <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-farm-green via-farm-wheat to-farm-earth" />
 
         <div className="space-y-4">
           {calendarData.map((item, index) => {
@@ -89,8 +89,8 @@ export const CropCalendar = () => {
             return (
               <div key={index} className="relative flex gap-4 pl-2">
                 {/* Timeline dot */}
-                <div className={`relative z-10 h-8 w-8 rounded-full bg-${item.color}/20 flex items-center justify-center flex-shrink-0 border-2 border-${item.color}`}>
-                  <Icon className={`h-4 w-4 text-${item.color}`} />
+                    <div className={`relative z-10 h-8 w-8 rounded-full bg-muted ${`bg-${item.color}`} flex items-center justify-center flex-shrink-0 border-2 ${`border-${item.color}`} shadow-sm`}>
+                      <Icon className="h-4 w-4 text-black" />
                 </div>
 
                 {/* Content */}
