@@ -49,7 +49,6 @@ export const translations = {
     soilGroup: 'Soil Group',
     irrigationSystem: 'Irrigation System',
     soilPH: 'Soil pH',
-    availablec: 'available soil carbon'
     availableN: 'Available Nitrogen (kg/ha)',
     availableP: 'Available Phosphorus (kg/ha)',
     availableK: 'Available Potassium (kg/ha)',
@@ -201,7 +200,6 @@ export const translations = {
     soilGroup: 'மண் குழு',
     irrigationSystem: 'நீர்ப்பாசன முறை',
     soilPH: 'மண் pH',
-    availablec: 'கிடைக்கும் மண் கார்பன்'
     availableN: 'கிடைக்கும் நைட்ரஜன் (கிகி/ஹெ)',
     availableP: 'கிடைக்கும் பாஸ்பரஸ் (கிகி/ஹெ)',
     availableK: 'கிடைக்கும் பொட்டாசியம் (கிகி/ஹெ)',
