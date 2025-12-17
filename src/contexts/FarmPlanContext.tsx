@@ -12,6 +12,7 @@ export interface SoilHealth {
   availableN: number;
   availableP: number;
   availableK: number;
+  soilOrganicCarbon: number;
 }
 
 export interface FertilizerSources {
@@ -60,6 +61,7 @@ const defaultFarmPlan: FarmPlanData = {
     availableN: 280,
     availableP: 15,
     availableK: 110,
+    soilOrganicCarbon: 0.6,
   },
   fertilizerSources: {
     nSource: 'urea',

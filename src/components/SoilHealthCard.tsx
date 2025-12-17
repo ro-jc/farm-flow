@@ -136,23 +136,40 @@ export const SoilHealthCard = () => {
             className="h-11"
           />
         </div>
+
+        {/* Soil Organic Carbon */}
+        <div className="space-y-2">
+          <Label className={language === 'ta' ? 'font-tamil' : ''}>
+            {t('soilOrganicCarbon')}
+          </Label>
+          <Input
+            type="number"
+            step={0.01}
+            value={farmPlan.soilHealth.soilOrganicCarbon}
+            onChange={(e) => updateSoilHealth('soilOrganicCarbon', parseFloat(e.target.value) || 0)}
+            className="h-11"
+          />
+        </div>
       </div>
 
       {/* NPK Status Indicator */}
-      <div className="grid grid-cols-3 gap-4 p-4 rounded-xl bg-muted/50 border border-border">
+      <div className="grid grid-cols-4 gap-4 p-4 rounded-xl bg-muted/50 border border-border">
         {[
-          { label: 'N', value: farmPlan.soilHealth.availableN, low: 200, high: 450, color: 'farm-green' },
-          { label: 'P', value: farmPlan.soilHealth.availableP, low: 10, high: 22, color: 'farm-wheat' },
-          { label: 'K', value: farmPlan.soilHealth.availableK, low: 100, high: 300, color: 'farm-earth' },
+          { label: 'N', value: farmPlan.soilHealth.availableN, low: 200, high: 450, color: 'farm-green', unit: 'kg/ha' },
+          { label: 'P', value: farmPlan.soilHealth.availableP, low: 10, high: 22, color: 'farm-wheat', unit: 'kg/ha' },
+          { label: 'K', value: farmPlan.soilHealth.availableK, low: 100, high: 300, color: 'farm-earth', unit: 'kg/ha' },
+          { label: 'C', value: farmPlan.soilHealth.soilOrganicCarbon, low: 0.5, high: 0.75, color: 'farm-wheat', unit: '%' },
         ].map((nutrient) => {
-          const status = nutrient.value < nutrient.low ? 'Low' : nutrient.value > nutrient.high ? 'High' : 'Medium';
-          const statusColor = status === 'Low' ? 'text-destructive' : status === 'High' ? 'text-farm-green' : 'text-farm-wheat';
-          
+          const statusKey = nutrient.value < nutrient.low ? 'low' : nutrient.value > nutrient.high ? 'high' : 'medium';
+          const statusColor = statusKey === 'low' ? 'text-destructive' : statusKey === 'high' ? 'text-farm-green' : 'text-farm-wheat';
+          const statusLabel = t(statusKey as any);
+          const displayValue = nutrient.unit === '%' ? Number(nutrient.value).toFixed(2) : nutrient.value;
+
           return (
             <div key={nutrient.label} className="text-center">
               <div className={`text-2xl font-bold text-${nutrient.color}`}>{nutrient.label}</div>
-              <div className="text-sm text-muted-foreground">{nutrient.value} kg/ha</div>
-              <div className={`text-xs font-medium ${statusColor}`}>{status}</div>
+              <div className="text-sm text-muted-foreground">{displayValue} {nutrient.unit}</div>
+              <div className={`text-xs font-medium ${statusColor}`}>{statusLabel}</div>
             </div>
           );
         })}

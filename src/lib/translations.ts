@@ -52,6 +52,7 @@ export const translations = {
     soilGroup: 'Soil Group',
     irrigationSystem: 'Irrigation System',
     soilPH: 'Soil pH',
+    soilOrganicCarbon: 'Soil Organic Carbon (%)',
     availableN: 'Available Nitrogen (kg/ha)',
     availableP: 'Available Phosphorus (kg/ha)',
     availableK: 'Available Potassium (kg/ha)',
@@ -147,6 +148,9 @@ export const translations = {
     qtlPerAcre: 'qtl/acre',
     kgPerAcre: 'kg/acre',
     rsPerAcre: '₹/acre',
+    low: 'Low',
+    medium: 'Medium',
+    high: 'High',
     
     // Buttons
     next: 'Next',
@@ -206,6 +210,7 @@ export const translations = {
     soilGroup: 'மண் குழு',
     irrigationSystem: 'நீர்ப்பாசன முறை',
     soilPH: 'மண் pH',
+    soilOrganicCarbon: 'மண் கார்பன் (%)',
     availableN: 'கிடைக்கும் நைட்ரஜன் (கிகி/ஹெ)',
     availableP: 'கிடைக்கும் பாஸ்பரஸ் (கிகி/ஹெ)',
     availableK: 'கிடைக்கும் பொட்டாசியம் (கிகி/ஹெ)',
@@ -301,6 +306,9 @@ export const translations = {
     qtlPerAcre: 'குவிண்டால்/ஏக்கர்',
     kgPerAcre: 'கிகி/ஏக்கர்',
     rsPerAcre: '₹/ஏக்கர்',
+    low: 'குறைவு',
+    medium: 'மிதம்',
+    high: 'அதிகம்',
     
     // Buttons
     next: 'அடுத்து',
