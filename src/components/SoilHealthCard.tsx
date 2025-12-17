@@ -141,9 +141,9 @@ export const SoilHealthCard = () => {
       {/* NPK Status Indicator */}
       <div className="grid grid-cols-3 gap-4 p-4 rounded-xl bg-muted/50 border border-border">
         {[
-          { label: 'N', value: farmPlan.soilHealth.availableN, low: 200, high: 400, color: 'farm-green' },
-          { label: 'P', value: farmPlan.soilHealth.availableP, low: 15, high: 30, color: 'farm-wheat' },
-          { label: 'K', value: farmPlan.soilHealth.availableK, low: 150, high: 300, color: 'farm-earth' },
+          { label: 'N', value: farmPlan.soilHealth.availableN, low: 200, high: 450, color: 'farm-green' },
+          { label: 'P', value: farmPlan.soilHealth.availableP, low: 10, high: 22, color: 'farm-wheat' },
+          { label: 'K', value: farmPlan.soilHealth.availableK, low: 100, high: 300, color: 'farm-earth' },
         ].map((nutrient) => {
           const status = nutrient.value < nutrient.low ? 'Low' : nutrient.value > nutrient.high ? 'High' : 'Medium';
           const statusColor = status === 'Low' ? 'text-destructive' : status === 'High' ? 'text-farm-green' : 'text-farm-wheat';
