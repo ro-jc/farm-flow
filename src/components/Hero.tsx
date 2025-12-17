@@ -55,7 +55,13 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
               {language === 'en' ? 'Start Planning' : 'திட்டமிடலை தொடங்கு'}
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
-            </div>
+            <Button 
+              variant="farmOutline" 
+              size="lg"
+            >
+              {language === 'en' ? 'Learn More' : 'மேலும் அறிக'}
+            </Button>
+          </div>
 
           {/* Feature Pills */}
           <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
