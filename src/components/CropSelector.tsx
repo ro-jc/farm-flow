@@ -2,6 +2,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useFarmPlan, CropType } from '@/contexts/FarmPlanContext';
 import { cn } from '@/lib/utils';
 import { Check } from 'lucide-react';
+import { cropVarieties } from '@/lib/cropData';
 
 export const CropSelector = () => {
   const { t, language } = useLanguage();
@@ -26,7 +27,7 @@ export const CropSelector = () => {
           return (
             <button
               key={crop.id}
-              onClick={() => updateFarmPlan({ crop: crop.id })}
+              onClick={() => updateFarmPlan({ crop: crop.id, variety: null })}
               className={cn(
                 "relative flex flex-col items-center p-6 rounded-2xl border-2 transition-all duration-300",
                 isSelected 
@@ -49,6 +50,26 @@ export const CropSelector = () => {
           );
         })}
       </div>
+
+      {farmPlan.crop && (
+        <div className="mt-4">
+          <label className={`block text-sm font-medium mb-2 ${language === 'ta' ? 'font-tamil' : ''}`}>
+            {t('selectVariety')}
+            <span className="text-destructive ml-1">*</span>
+          </label>
+          <select
+            required
+            value={farmPlan.variety ?? ''}
+            onChange={(e) => updateFarmPlan({ variety: e.target.value })}
+            className="w-full rounded-md border px-3 py-2"
+          >
+            <option value="">{t('chooseVariety')}</option>
+            {(cropVarieties[farmPlan.crop] || []).map((v) => (
+              <option key={v} value={v}>{v}</option>
+            ))}
+          </select>
+        </div>
+      )}
     </div>
   );
 };

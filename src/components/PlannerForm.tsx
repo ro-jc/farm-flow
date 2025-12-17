@@ -37,7 +37,7 @@ export const PlannerForm = ({ onPlanGenerate }: PlannerFormProps) => {
   const canProceed = () => {
     switch (currentStep) {
       case 0: return true; // Practice always selected
-      case 1: return !!farmPlan.crop;
+      case 1: return !!farmPlan.crop && !!farmPlan.variety;
       case 2: return !!farmPlan.region;
       case 3: return !!farmPlan.season;
       case 4: return !!farmPlan.sowingDate;

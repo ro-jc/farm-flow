@@ -23,6 +23,7 @@ export interface FertilizerSources {
 export interface FarmPlanData {
   practice: FarmingPractice;
   crop: CropType | null;
+  variety?: string | null;
   region: string;
   season: Season | null;
   sowingDate: Date | null;
@@ -45,6 +46,7 @@ interface FarmPlanContextType {
 const defaultFarmPlan: FarmPlanData = {
   practice: 'integrated',
   crop: null,
+  variety: null,
   region: '',
   season: null,
   sowingDate: null,

@@ -41,6 +41,22 @@ export const crops = {
   },
 };
 
+export const cropVarieties: Record<string, string[]> = {
+  rice: [
+    'ADT 36 (Short duration)',
+    'Jaya (Medium Duration)',
+    'White ponni (Long duration)'
+  ],
+  maize: [
+    'CO1',
+    'K1'
+  ],
+  cotton: [
+    'MCU 5',
+    'CO17',
+    'K 12'
+  ],
+};
 export const tamilNaduDistricts = [
   'Ariyalur', 'Chengalpattu', 'Chennai', 'Coimbatore', 'Cuddalore',
   'Dharmapuri', 'Dindigul', 'Erode', 'Kallakurichi', 'Kanchipuram',

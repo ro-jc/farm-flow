@@ -23,6 +23,9 @@ export const translations = {
     rice: 'Rice (நெல்)',
     maize: 'Maize (மக்காச்சோளம்)',
     cotton: 'Cotton (பருத்தி)',
+    selectVariety: 'Select Variety',
+    chooseVariety: 'Choose variety',
+    variety: 'Variety',
     
     // Region
     selectRegion: 'Select Region',
@@ -174,6 +177,9 @@ export const translations = {
     rice: 'நெல்',
     maize: 'மக்காச்சோளம்',
     cotton: 'பருத்தி',
+    selectVariety: 'விதையை தேர்வு செய்யவும்',
+    chooseVariety: 'விதையை தேர்ந்தெடுக்கவும்',
+    variety: 'விதை',
     
     // Region
     selectRegion: 'பகுதியை தேர்வு செய்யவும்',

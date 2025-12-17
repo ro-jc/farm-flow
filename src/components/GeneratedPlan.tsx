@@ -75,6 +75,22 @@ export const GeneratedPlan = ({ onBack }: GeneratedPlanProps) => {
             </div>
           </div>
 
+          {farmPlan.variety && (
+            <div className="flex items-center gap-3">
+              <div className="h-10 w-10 rounded-xl bg-farm-wheat/10 flex items-center justify-center">
+                <Leaf className="h-5 w-5 text-farm-wheat" />
+              </div>
+              <div>
+                <div className="text-xs text-muted-foreground">
+                  {language === 'en' ? 'Variety' : 'விதை'}
+                </div>
+                <div className={`font-medium ${language === 'ta' ? 'font-tamil' : ''}`}>
+                  {farmPlan.variety}
+                </div>
+              </div>
+            </div>
+          )}
+
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-xl bg-farm-organic/10 flex items-center justify-center">
               <Leaf className="h-5 w-5 text-farm-organic" />
